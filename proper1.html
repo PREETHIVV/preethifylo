@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+ 
+
+  margin: 0;
+}
+
+.bg {
+ 
+  background-image: url("assignment.jpg");
+
+ 
+  height: 100%;
+   
+
+ 
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg1{
+background-image: url("assignment.jpg");
+
+ 
+  height: 100%;
+
+background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg2{
+
+background-image: url("assignment.jpg");
+
+ 
+  height: 100%;
+
+background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+</style>
+<title>preethi fylo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet<" href="#https://drive.google.com/drive/folders/145XMIBx74Aq5YN2L35CGERt4lq5cpTo0?usp=sharing">preethi.v fylo">
+<style>
+.mySlides {display:none;}
+</style>
+</head>
+
+<body>
+<div class="bg"></div>
+<div class="bg1"></div>
+<div class="bg2"></div>
+
+<h2 class="bg">Automatic Slideshow</h2>
+
+<div class=" bg" style="max-width:500px">
+  <img class="preethi" src="assignment.jpg" style="width:100%">
+  <img class="preethi" src="assignment.jpg" style="width:100%">
+  <img class="preethi" src="assignment.jpg" style="width:100%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); 
+}
+</script>
+
+</body>
+</html>
