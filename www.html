@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+
+<h2>MOVIES LIST</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<ul id="myUL">
+  <li><a href="https://github.com/PREETHIVV/preethifylo/blob/master/1st%20a.html" target="_top"> a</a></li>
+  <li><a href="https://github.com/PREETHIVV/preethifylo/blob/master/2ndb.html"target="_top"> b</a> </li>
+
+  <li><a href="https://github.com/PREETHIVV/preethifylo/blob/master/3rd%20c.html"target="_top"> c</a> </li>
+  <li><a href="https://github.com/PREETHIVV/preethifylo/blob/master/4th%20d.html"target="_top"> d</a> </li>
+
+  <li><a href="https://github.com/PREETHIVV/preethifylo/blob/master/5th%20e.html"target="_top"> e</a> </li>
+  
+</ul>
+
+<input id="myInput" type="text">
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var letter = document.getElementById("myInput").value;
+  var text;
+
+  // If the letter is "a"
+  if (letter === "a") {
+    text = "movie valid!";
+    
+  } else if (letter === "b" || letter === "c") {
+    text = "valid";
+    
+  // If the letter is anything else
+  } else if(letter ==="d" || letter ==="e" {
+    text = "valid";
+else
+text="irrelevent error msg";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
