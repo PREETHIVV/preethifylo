@@ -1,37 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-}
-
-.bg {
- 
-  background-image: url("assignment.jpg");
-
- 
-  height: 100%; 
-
- 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-</style>
+  <link rel="stylesheet" href="style.css" />
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.1/angular.min.js"></script>
+  <script src="script.js"></script>
+  <title>Movie Search | OMDb API</title>
 </head>
-<body>
-<ul>
-  <li><a href="#https://drive.google.com/drive/folders/145XMIBx74Aq5YN2L35CGERt4lq5cpTo0?usp=sharing">preethi.v fylo</a></li>
- 
-</ul>
 
+<body ng-app="OMDbAPISearch">
+  <div class="container" ng-controller="searchMovies">
 
-<div class="bg"></div>
+    <h1>Search a Movie Title Below</h1>
+    <p>This application utilizes OMDb API data for all results (<a href="http://www.omdbapi.com" target="_blank">http://www.omdbapi.com</a>)</p>
+    <form>
+      <div class="search">
+       <input id="theSearch" ng-model="searchparam" placeholder="movie name" type="text" ngTrim="true" />
+       <button ng-click="fetch()">Search</button>
+       <div class="clear"></div>
+      </div>
+    </form>
 
-<p>preethi.v fylo image</p>
+    <div class="results">
 
+      <div class="result" movie-srch-results ng-repeat="movie in movieResults"></div>
+
+    </div>
+    <div class="noResults"></div>
+
+  </div>
 </body>
+
 </html>
